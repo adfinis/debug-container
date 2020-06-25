@@ -7,6 +7,8 @@ LABEL org.opencontainers.image.title="alpine-debug-container" \
       org.opencontainers.image.url="https://github.com/adfinis-sygroup/debug-container" \
       org.opencontainers.image.licenses="AGPL-3.0-or-later"
 
+ADD entrypoint.sh /entrypoint.sh
+
 RUN apk add --no-cache \ 
     bash \
     bind-tools \
@@ -14,6 +16,7 @@ RUN apk add --no-cache \
     jq \
     openssl \
     tcpdump \
-    wget
+    wget && \
+    chmod +x /entrypoint.sh
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/entrypoint.sh"]
