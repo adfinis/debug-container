@@ -66,6 +66,27 @@ spec:                                                           spec:
         - containerPort: 80                                             - containerPort: 80
 ```
 
+## Patch Deployments
+
+Create a patch snippet `debug-patch.yml` to amend the debug container:
+```yaml
+---
+
+spec:
+  template:
+    spec:
+      containers:
+      - name: debug
+        image: adfinissygroup/debug:latest
+```
+
+Apply the patch:
+```bash
+kubectl patch deployment nginx-deployment --patch "$(cat debug-patch.yml)"
+```
+
+## Debugging Container Logs
+
 You can then access the debug container inside your pod 
 
 ```
