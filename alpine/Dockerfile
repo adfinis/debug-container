@@ -8,6 +8,6 @@ RUN	apk add --no-cache \
 	jq \
 	openssl \
 	tcpdump \
-	wget \
-	&& chmod +x /entrypoint.sh
+	wget
+
 CMD	["/bin/sleep","inf"]
