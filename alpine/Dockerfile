@@ -19,4 +19,4 @@ RUN apk add --no-cache \
     wget && \
     chmod +x /entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+CMD ["/bin/sleep", "inf"]
