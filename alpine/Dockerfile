@@ -7,9 +7,9 @@ LABEL org.opencontainers.image.vendor="Adfinis"
 LABEL org.opencontainers.image.url="https://github.com/adfinis-sygroup/debug-container"
 LABEL org.opencontainers.image.licenses="AGPL-3.0-or-later"
 
-RUN	  apk add --no-cache \
-	  bash \
-	  bind-tools \
+RUN   apk add --no-cache \
+      bash \
+      bind-tools \
       curl \
       jq \
       openssl \
