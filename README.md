@@ -1,14 +1,12 @@
 # debug-container
 
-[![](https://images.microbadger.com/badges/image/adfinissygroup/debug.svg)](https://microbadger.com/images/adfinissygroup/debug "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/adfinissygroup/debug.svg)](https://microbadger.com/images/adfinissygroup/debug "Get your own version badge on microbadger.com")
-
 A container image packed with debugging tools
 
 # Quick start
 
 ```
-podman run -it --entrypoint=/bin/bash adfinissygroup/debug
-Trying to pull docker.io/adfinissygroup/debug...
+podman run -it --entrypoint=/bin/bash ghcr.io/adfinis-sygroup/debug
+Trying to pull ghcr.io/adfinis-sygroup/debug...
 Getting image source signatures
 Copying blob df20fa9351a1 skipped: already exists
 Copying blob 95af1e08e02d done
@@ -32,7 +30,7 @@ Modify your deployment / pod to include a second container:
 ```
 containers:
   - name: debug
-    image: adfinissygroup/debug:latest
+    image: ghcr.io/adfinis-sygroup/debug:latest
     imagePullPolicy: Always
 ```
 
@@ -59,7 +57,7 @@ spec:                                                           spec:
     spec:                                                           spec:
       containers:                                                     containers:
                                                               >       - name: debug
-                                                              >         image: adfinissygroup/debug:latest
+                                                              >         image: ghcr.io/adfinis-sygroup/debug:latest
       - name: nginx                                                   - name: nginx
         image: nginx:1.14.2                                             image: nginx:1.14.2
         ports:                                                          ports:
@@ -77,7 +75,7 @@ spec:
     spec:
       containers:
       - name: debug
-        image: adfinissygroup/debug:latest
+        image: ghcr.io/adfinis-sygroup/debug:latest
 ```
 
 Apply the patch:
