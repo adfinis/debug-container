@@ -1,3 +1,15 @@
+# DEPRECATED
+
+Please no longer use this image.
+
+Since Kubernetes version 1.23 you can use `kubectl debug` to spawn ephemeral containers for debugging:
+
+https://kubernetes.io/docs/tasks/debug-application-cluster/debug-running-pod/
+
+There are also more extended debug container images for kubernetes which can be used with this feature:
+
+Example: https://github.com/lightrun-platform/koolkits
+
 # debug-container
 
 A container image packed with debugging tools
